@@ -4,6 +4,11 @@ from discord.ext import commands
 import json
 import pandas as pd
 
+TOKEN = os.getenv("DISCORD_TOKEN")
+
+if not TOKEN:
+    raise ValueError("DISCORD_TOKEN is not set in the environment variables.")
+
 # Google sheet länk
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1RCP3YasIrjwxp8oGOVruwDQxSS_fKL3hImTeQTZNTUYnb0bK6VKS23lOhCs5cfU82kMlMDJw3SGQ/pub?output=csv"  # Replace this with your public Google Sheet CSV link
 
