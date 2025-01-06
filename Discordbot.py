@@ -4,11 +4,6 @@ from discord.ext import commands
 import json
 import pandas as pd
 
-
-with open('discordtoken.json', 'r') as cfg:
-    data = json.load(cfg)
-
-
 # Google sheet länk
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1RCP3YasIrjwxp8oGOVruwDQxSS_fKL3hImTeQTZNTUYnb0bK6VKS23lOhCs5cfU82kMlMDJw3SGQ/pub?output=csv"  # Replace this with your public Google Sheet CSV link
 
@@ -112,6 +107,6 @@ async def on_ready():
     print(f"Logged in as {bot.user}!")
 
 # KÖR
-bot.run(data['token'])
+bot.run(TOKEN)
 
 
